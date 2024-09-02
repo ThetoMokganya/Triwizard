@@ -1,18 +1,26 @@
-import { useMemo, useState } from "react";
-import { FlatList } from "react-native";
+import { useCallback, useEffect, useState } from "react";
+import { FlatList, View } from "react-native";
 import { HouseComponent } from ".";
 import { allHouses } from "../../api/house";
 
-export function HousePage(){
-
+export function HousePage(): React.JSX.Element {
     const [house, setHouses] = useState<string[]>();
-    useMemo(()=>{
-        allHouses().then((response) => setHouses(response?.house))
-    },[])
 
+    useEffect(() => {
+        allHouses().then((response) => {
+            setHouses(response)
+        })
+    }, [])
+
+    const onHousePress = useCallback(() => {
+    }, [])
     return (
-    <FlatList
-    data={house}
-    renderItem={({item}) => <HouseComponent houseName={item}/>}>
-    </FlatList>)
+        <View>
+            <FlatList
+                data={house}
+                renderItem={({ item, index }) =>
+                    <HouseComponent key={index} houseName={item} onPress={onHousePress}/>}>
+            </FlatList>
+        </View>
+    )
 }

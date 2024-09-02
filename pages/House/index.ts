@@ -1,3 +1,3 @@
-export * from './house.style';
-export * from './house.component';
+export * from './House.component';
 export * from './House.page';
+export * from './House.style';

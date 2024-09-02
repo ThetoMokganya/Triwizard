@@ -1,8 +1,6 @@
-import { House } from ".";
 import { api } from "../../utilities/axios";
 
 export async function allHouses(){
-    const response = await api.get<House>('api/houses');
-
-    return response.data?.details;
+    const response = await api.get<string[]>('api/houses');
+    return response.data;
 }
