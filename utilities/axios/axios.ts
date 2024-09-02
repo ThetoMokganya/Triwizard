@@ -1,5 +1,4 @@
 import axios, { AxiosResponse, Method } from "axios";
-import { AxiosResponseData } from "./axios.types";
 
 const axiosInstance = axios.create({
     baseURL: 'https://potterhead-api.vercel.app/',
@@ -13,7 +12,7 @@ const axiosInstance = axios.create({
   const parseResponse = <TResponse>(response: AxiosResponse) => {
     const { status } = response;
     const ok = status >= 200 && status < 300;
-    const data = response.data as AxiosResponseData<TResponse>;
+    const data = response.data;
     const message = data?.message ? data.message : ok ? '' : 'An error occurred';
     return { data, status, message, ok };
   };
