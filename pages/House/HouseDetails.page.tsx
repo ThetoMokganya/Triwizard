@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { FlatList, View } from "react-native";
 import { HouseDetailResponse, getHouse } from "../../api/house";
 import { StudentCard } from "../../components/StudentCard";
-import { ScreenProps } from "../../navigation/Stack";
+import { ScreenProps } from "../../navigation";
 
 export const HouseDetails: React.FC<ScreenProps<'HouseDetails'>> = ({
     navigation,
     route,
-  }) => {
+}) => {
     const [houseDetails, setHouseDetails] = useState<HouseDetailResponse[]>();
 
     useEffect(() => {
@@ -23,6 +23,7 @@ export const HouseDetails: React.FC<ScreenProps<'HouseDetails'>> = ({
                     image={item.image}
                     name={item.name}
                     gender={item.gender}
+                    viewMore={false}
                 />}>
         </FlatList>
     </View>)

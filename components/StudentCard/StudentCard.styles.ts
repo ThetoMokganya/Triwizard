@@ -7,9 +7,13 @@ export const styles = StyleSheet.create({
         marginBottom: scale(15),
         padding: scale(15),
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         borderWidth: scale(1),
         borderRadius: scale(20)
+    },
+    detailsSection: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
     },
     image: {
         width: scale(40),
@@ -25,5 +29,11 @@ export const styles = StyleSheet.create({
     },
     gender: {
         fontSize: scale(12)
+    },
+    viewMoreText: {
+        color: '#6495ed',
+    },
+    viewMoreContainer: {
+        alignSelf: 'center'
     }
 })

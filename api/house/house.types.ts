@@ -1,7 +1,7 @@
 import { Character } from "../character.types";
 
-export interface HouseResponse{
+export interface HouseResponse {
     house: string[];
 }
 
-export interface HouseDetailResponse extends Character{}
+export interface HouseDetailResponse extends Character { }
