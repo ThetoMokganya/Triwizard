@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Image, Text, View } from "react-native";
 import { styles } from ".";
 import { Character } from "../../api/character.types";
-import { getStudent } from "../../api/students";
+import { getStudent } from "../../api/student";
 import { ScreenProps } from "../../navigation";
 
 
