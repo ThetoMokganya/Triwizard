@@ -14,7 +14,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
-import { BottomTabNavigation } from './navigation';
+import { NavigationStack } from './navigation/Stack';
 
 
 
@@ -27,7 +27,7 @@ function App(): React.JSX.Element {
 
   return (
     <NavigationContainer>
-      <BottomTabNavigation />
+      <NavigationStack />
     </NavigationContainer>
   );
 }
