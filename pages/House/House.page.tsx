@@ -15,14 +15,14 @@ export function HousePage(): React.JSX.Element {
     }, [])
 
     const onHousePress = useCallback((houseName: string) => {
-        navigation.navigate("HouseDetails", {houseName})
+        navigation.navigate("HouseDetails", { houseName })
     }, [house])
     return (
         <View>
             <FlatList
                 data={house}
                 renderItem={({ item, index }) =>
-                    <HouseComponent key={index} houseName={item} onPress={() => {onHousePress(item)}}/>}>
+                    <HouseComponent key={index} houseName={item} onPress={() => { onHousePress(item) }} />}>
             </FlatList>
         </View>
     )

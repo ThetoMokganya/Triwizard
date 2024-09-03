@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
         color: '#000000'
     },
     viewDetails: {
-        fontSize: scale(12)
+        fontSize: scale(12),
+        color: '#6495ed'
     },
     item: {
         borderColor: '#f9f9f9f',
