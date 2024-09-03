@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useCallback, useEffect, useState } from "react";
 import { FlatList, View } from "react-native";
 import { Character } from "../../api/character.types";
-import { allStudents } from "../../api/students";
+import { allStudents } from "../../api/student";
 import { StudentCard } from "../../components/StudentCard";
 
 export function StudentPage(): React.JSX.Element {
