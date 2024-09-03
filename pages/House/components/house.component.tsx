@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity } from "react-native";
-import { HouseComponentProps } from "./House.types";
-import { styles } from "./house.style";
+import { HouseComponentProps } from "../House.types";
+import { styles } from "../house.style";
 
 export function HouseComponent(props: HouseComponentProps) {
     return (
